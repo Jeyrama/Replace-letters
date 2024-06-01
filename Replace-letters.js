@@ -34,3 +34,19 @@ function replaceLetters(word) {
 }
 
 // or
+
+function replaceLetters(word) {
+  return [...word].map(l =>{
+    if( consonants.includes(l) ){
+      let nextL = alphabet.slice( alphabet.indexOf(l) )
+                          .find( el => vowels.includes(el) );
+      return nextL || 'a';
+    } else if( vowels.includes(l) ) {
+      let precL = alphabet.slice(0, alphabet.indexOf(l) )
+                          .reverse()
+                          .find( el => consonants.includes(el) );
+      return precL || 'z';
+    }
+    
+  }).join``;
+}
