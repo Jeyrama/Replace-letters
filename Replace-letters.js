@@ -32,3 +32,5 @@ function replaceLetters(word) {
   
   return word.split('').map(e => charMap[e]).join('');
 }
+
+// or
