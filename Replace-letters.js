@@ -19,3 +19,6 @@ It is preloaded:
 
 Note: You work with lowercase letters only.
 */
+
+
+// Solution
